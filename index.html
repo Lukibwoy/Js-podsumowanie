@@ -2,29 +2,154 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProGamers</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProGamers</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-<script src="https://kit.fontawesome.com/57dc44e17d.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://kit.fontawesome.com/57dc44e17d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    
 
 
-    
-      </script>
-    <script src="js/slicksettings.js"></script>
-    <script src="js/script.js"></script>
+
+  <!-- Poniższe zadania będą opisem efektu, jaki klient chce otrzymać na stronie. Twoim zadaniem będzie stworzenie na podstawie jego opisu oraz podpowiedzi, strony i skryptu JS, który spełni jego oczekiwania i zademonstruje rozwiązanie problemu.
+
+Zad. 1
+Story:
+W panelu administracyjnym do mojego bloga posiadam tabelkę, do której za pomocą API obecnie pobieram wszystkie komentarze do artykułów, a następnie mogę usuwać komentarze, które są uznawane za nieprzyzwoite. W moim panelu administracyjnym brakuje mi możliwości wyszukiwania i wyróżniania komentarzy nieprzyzwoitych.
+
+	Podpowiedź:
+Klient nie udostępnił nam swojego API, więc skorzystaj z API https://jsonplaceholder.typicode.com/comments aby wyświetlić komentarze w tabeli. Stwórz tabelę z nagłówkami name, email, body oraz action. 
+
+W polu action dodaj przycisk usuń i zaloguj w konsoli (usuń odnosi się do komentarza, jaki chcesz usunąć). Dodaj możliwość wyszukiwania w tabeli za pomocą inputów wyszukujących po polach name, email i body.
+Dodaj możliwość zaznaczania kilku wierszy i przycisk do usuwania zaznaczonych.
+ -->
+  <h2>Comments</h2>
+  <div class="container">
+
+    <table>
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>email</th>
+          <th>body</th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <button id="deleteSelectedButton">Delete Selected</button>
+
+
+
+  <!-- Zad.2
+	Story:
+Podczas zamówienia mebli mamy w firmie ponad sto kolorów, obecnie klient wybiera kolor z selecta co jest dla niego niewygodne. Mamy przez to mniejszą konwersję sprzedaży. Chcielibyśmy dać możliwość wyszukiwania koloru.
+
+	Podpowiedź:
+Stwórz inputa, w którym po wpisywaniu przez użytkownika filtrowane będą dostępne opcje. Po kliknięciu na input pod nim wyświetlają się wszystkie możliwe opcje i nadal można pisać. Kolory nie muszą być wygenerowane, na potrzeby developmentu stwórz wyszukiwanie po liście elementów. -->
+
+  <div class="search">
+    <input type="text" class="searchColor" placeholder="Wyszukaj kolor...">
+  </div>
+  <ul id="colors">
+    <li>Red</li>
+    <li>Green</li>
+    <li>Blue</li>
+    <li>Yellow</li>
+    <li>Purple</li>
+    <li>Orange</li>
+    <li>Black</li>
+    <li>White</li>
+    <li>Gray</li>
+    <li>Pink</li>
+  </ul>
+
+  <!-- Zad. 3 
+Story:
+Na mojej stronie fotograficznej obecnie pokazuję galerię wykonanych zdjęć (kafelki na całej stronie obok siebie o stałych rozmiarach). Chciałbym aby za każdym odświeżeniem strony do galerii ładowały się inne zdjęcia, a rozmiary kafelków generowały się dynamicznie. Po najechaniu myszą na zdjęcie wyświetlał się nazwa autora zdjęcia.
+
+Podpowiedź:
+ Wykorzystaj Grida i jego zaawansowane właściwości do dopasowania kwadratów, tak aby zajmowały jak największą przestrzeń na stronie. Do załadowania przykładowych zdjęć wykorzystaj api unsplash Unsplash API Documentation | Free HD Photo API  -->
+
+
+  <h2></h2>
+  <div class="gallery"></div>
+
+
+
+
+  <!-- Zad. 4
+Story:
+W naszej wewnętrznej aplikacji mamy wiele formularzy, które generujemy na bieżąco za pomocą edytora. Generowanie formularza za pomocą edytora zajmuje nawet kilka godzin, a potrzebujemy ich jak najszybciej. Chcielibyśmy otrzymać rozwiązanie, które pozwoli na szybkie tworzenie dynamicznych formularzy na podstawie parametrów konfiguracyjnych.
+Podpowiedź:
+Stwórz funkcję, która zamieni podanego jej JSONa w formularz, który następnie pojawi się na stronie. JSON powinien zawierać nazwę pola jego typ i walidację. Stwórz funkcję, która na podstawie walidacji stworzy do formularza przycisk i będzie decydować czy może go wysłać dalej czy nie i wskaże które pola są nieprawidłowo wypełnione. -->
+
+
+
+
+  <!-- Zad. 5 
+Story:
+Nasza firma chciałaby otrzymać możliwość oglądania produktu za pomocą lupki tak jak w sklepie lego Koloseum 10276 | Creator Expert | Oficjalnym sklepie LEGO® PL. Po kliknięciu zdjęcie powiększy się i będzie można przesuwać się po nim.
+
+Podpowiedź:
+Wykorzystaj manipulowanie background position oraz obserwowanie pozycji myszy po kliknięciu na obrazek -->
+
+
+  <div class="lego"></div>
+
+  <!-- Zad. 6
+	Story:
+Klient zapisuje spotkania ze swoimi kontrahentami w bazie danych w odpowiednich godzinach. Brakuje mu możliwości wyświetlania spotkań na jednym widoku. Przygotuj tablicę obiektów, która będzie przechowywała godzinę, dzień, nazwę i dane kontrahenta w tabeli spotkań. Zainspiruj się widokiem poniżej. Obok nazwy dnia powinna wyświetlać się data. Domyślnie wyświetla się bieżący tydzień. Na dole dodaj przyciski do przełączania pomiędzy tygodniami.
+ -->
+
+  <div class="events">
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Dzień</th>
+          <th>Godzina</th>
+          <th>Nazwa spotkania</th>
+          <th>Klient</th>
+        </tr>
+      </thead>
+      <tbody id="calendar"></tbody>
+    </table>
+    <div id="navigation-buttons">
+      <button id="previous-week-button">Poprzedni tydzień</button>
+      <button id="next-week-button">Następny tydzień</button>
+    </div>
+  </div>
+
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  </script>
+  <script src="js/slicksettings.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
