@@ -94,10 +94,19 @@ Podpowiedź:
 Story:
 W naszej wewnętrznej aplikacji mamy wiele formularzy, które generujemy na bieżąco za pomocą edytora. Generowanie formularza za pomocą edytora zajmuje nawet kilka godzin, a potrzebujemy ich jak najszybciej. Chcielibyśmy otrzymać rozwiązanie, które pozwoli na szybkie tworzenie dynamicznych formularzy na podstawie parametrów konfiguracyjnych.
 Podpowiedź:
-Stwórz funkcję, która zamieni podanego jej JSONa w formularz, który następnie pojawi się na stronie. JSON powinien zawierać nazwę pola jego typ i walidację. Stwórz funkcję, która na podstawie walidacji stworzy do formularza przycisk i będzie decydować czy może go wysłać dalej czy nie i wskaże które pola są nieprawidłowo wypełnione. -->
+Stwórz funkcję, która zamieni podanego jej JSONa w formularz, który następnie pojawi się na stronie. JSON powinien zawierać nazwę pola jego typ i walidację. Stwórz funkcję, która na podstawie walidacji stworzy do formularza przycisk i będzie decydować czy może go wysłać dalej czy nie i wskaże które pola są nieprawidłowo wypełnione. 
+const formJson = [
+{fieldName:"imie", fieldType:"text",validationRegex:"[a-zA-Z]+"},
+{fieldName:"nazwisko", fieldType:"text",validationRegex:"[a-zA-Z]+"},
 
+{...}
+]
+function makeForm(inputJson) {
+  //create html by specification in inputJson form and return it
+}
+-->
 
-
+  <div id="form-container"></div>
 
   <!-- Zad. 5 
 Story:
@@ -125,6 +134,7 @@ Klient zapisuje spotkania ze swoimi kontrahentami w bazie danych w odpowiednich 
           <th>Klient</th>
         </tr>
       </thead>
+      <h3>YOUR MEETINGS</h3>
       <tbody id="calendar"></tbody>
     </table>
     <div id="navigation-buttons">
